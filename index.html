@@ -4,73 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>エンジニア育成講座の案内</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #2c2c2c;
+            color: #e0e0e0;
         }
         header {
-            background-color: #0073e6;
-            color: #fff;
+            background-color: #1a1a1a;
+            color: #ff6600;
             padding: 1.5rem;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #005bb5;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        nav a {
-            color: #fff;
-            padding: 1rem 1.5rem;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        nav a:hover {
-            background-color: #004494;
-        }
-        .container {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section {
-            margin-bottom: 2rem;
-            background-color: #fff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .section h2 {
-            font-size: 1.75rem;
-            margin-bottom: 1rem;
-            color: #0073e6;
-        }
-        .section p, .section ul {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        .section ul {
-            padding-left: 1.5rem;
-        }
-        .section ul li {
-            margin-bottom: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
         }
         footer {
-            background-color: #0073e6;
-            color: #fff;
+            background-color: #1a1a1a;
+            color: #ff6600;
             text-align: center;
             padding: 1rem;
             position: fixed;
             width: 100%;
             bottom: 0;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+        .navbar {
+            background-color: #333;
+            border-radius: 10px;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .nav-link:hover {
+            color: #ff6600 !important;
+        }
+        .section h2 {
+            color: #ff6600;
+        }
+        .section h3 {
+            color: #ff9933;
+        }
+        .container {
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #3a3a3a;
         }
     </style>
 </head>
@@ -78,25 +57,35 @@
     <header>
         <h1>エンジニア育成講座の案内</h1>
     </header>
-    <nav>
-        <a href="#introduction">案内文</a>
-        <a href="#features">講座の魅力</a>
-        <a href="#target">受講対象</a>
-        <a href="#fees">受講料</a>
-        <a href="#schedule">講座の開催日</a>
-        <a href="#curriculum">カリキュラムの構成</a>
-        <a href="#method">講座の進め方</a>
-        <a href="#resources">必要なリソース</a>
-        <a href="#requirements">PC要件</a>
-        <a href="#self-study">自己学習と記録</a>
-        <a href="#reason">講座が安価である理由</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">講座案内</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#introduction">案内文</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">講座の魅力</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#target">受講対象</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#fees">受講料</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#schedule">講座の開催日</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#curriculum">カリキュラムの構成</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#method">講座の進め方</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resources">必要なリソース</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#requirements">PC要件</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#self-study">自己学習と記録</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reason">講座が安価である理由</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <div class="container">
-        <section id="introduction" class="section">
+    <div class="container mt-4">
+        <section id="introduction" class="section mb-4">
             <h2>案内文</h2>
             <p>エンジニア育成講座へようこそ！私たちのエンジニア育成講座は、初心者から中級者までを対象に、実践的なスキルを身につけることを目指しています。この講座では、最新の技術を使ったフルスタック開発の基礎から応用までを学ぶことができます。</p>
         </section>
-        <section id="features" class="section">
+        <section id="features" class="section mb-4">
             <h2>講座の魅力</h2>
             <ul>
                 <li><strong>実践的なカリキュラム</strong>: Java/Springを使ったバックエンド開発、Vue.jsを使ったフロントエンド開発、AWSを活用したインフラ構築とデプロイなど、現場で役立つスキルを習得できます。</li>
@@ -105,7 +94,7 @@
                 <li><strong>柔軟な学習スケジュール</strong>: 自分のペースで学習を進めることができるため、忙しい方でも安心して受講できます。</li>
             </ul>
         </section>
-        <section id="target" class="section">
+        <section id="target" class="section mb-4">
             <h2>受講対象</h2>
             <p>この講座は以下のような方に最適です：</p>
             <ul>
@@ -113,7 +102,7 @@
                 <li>フルスタック開発に興味がある方</li>
             </ul>
         </section>
-        <section id="fees" class="section">
+        <section id="fees" class="section mb-4">
             <h2>受講料</h2>
             <p>この講座の受講料は以下の通りです：</p>
             <ul>
@@ -121,7 +110,7 @@
                 <li><strong>サブスクリプション形式</strong>: 毎月自動更新されます。サブスクリプションは月単位でいつでもやめることができます。</li>
             </ul>
         </section>
-        <section id="schedule" class="section">
+        <section id="schedule" class="section mb-4">
             <h2>講座の開催日</h2>
             <p>講義はなく、各自が自分のペースで進めます。期限は1年です。</p>
             <ul>
@@ -130,7 +119,7 @@
                 <li><strong>質問時間</strong>: この時間内でのみ講師への直接質問が可能です。</li>
             </ul>
         </section>
-        <section id="curriculum" class="section">
+        <section id="curriculum" class="section mb-4">
             <h2>カリキュラムの構成</h2>
             <h3>カリキュラムの要約</h3>
             <ul>
@@ -179,7 +168,7 @@
                 </li>
             </ul>
         </section>
-        <section id="method" class="section">
+        <section id="method" class="section mb-4">
             <h2>講座の進め方</h2>
             <p>この講座は「とにかく動かせ」をテーマに進めます。まずは手を動かして実際にコードを書き、動かしてみることを重視します。わからない部分があれば、自分で調べたり、講師に相談したりして解決していきます。また、ChatGPTやGeminiなどのAIツールの利用も推奨します。これらのツールを活用することで、効率的に学習を進めることができます。</p>
             <h3>おすすめの進め方</h3>
@@ -191,7 +180,7 @@
                 <li><strong>フィードバックを受ける</strong>: 定期的に進捗を発表し、フィードバックを受けることで、自分の理解度を確認し、改善点を見つけることができます。</li>
             </ul>
         </section>
-        <section id="resources" class="section">
+        <section id="resources" class="section mb-4">
             <h2>必要なリソース</h2>
             <ul>
                 <li>開発環境: VS Code、Chrome DevTools</li>
@@ -199,7 +188,7 @@
                 <li><strong>通信環境</strong>: オンラインで受講するため、大容量の通信環境が整っていること</li>
             </ul>
         </section>
-        <section id="requirements" class="section">
+        <section id="requirements" class="section mb-4">
             <h2>PC要件</h2>
             <ul>
                 <li>OS: Windowsのみ対象（MacやLinuxはサポート対象外）</li>
@@ -215,7 +204,7 @@
                 <li><strong>OS特有の設定やツールの習得</strong>: Windows特有の設定やツールのインストールに慣れてもらうことを目的としています。</li>
             </ul>
         </section>
-        <section id="self-study" class="section">
+        <section id="self-study" class="section mb-4">
             <h2>自己学習と記録</h2>
             <p>この講座では、自分で調べて整理する力を養うことを目指します。学習した内容はmarkdown形式で記録し、GitHubのリポジトリに保存することを推奨します。これにより、学習の進捗を可視化し、後から見返すことが容易になります。</p>
             <h3>記録のポイント</h3>
@@ -226,7 +215,7 @@
                 <li><strong>GitHubで共有</strong>: GitHubのリポジトリに記録を保存し、他の受講者や講師と共有します。</li>
             </ul>
         </section>
-        <section id="reason" class="section">
+        <section id="reason" class="section mb-4">
             <h2>講座が安価である理由</h2>
             <p>この講座が他の講座に比べて安価である理由は以下の通りです：</p>
             <ul>
@@ -240,5 +229,8 @@
     <footer>
         <p>&copy; 2023 エンジニア育成講座. All rights reserved.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
